@@ -22,9 +22,9 @@ LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = False
 USE_L10N = True
-MEDIA_ROOT = HERE + '/static/'
-MEDIA_URL = '/static/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+MEDIA_ROOT = HERE + '/media/'
+MEDIA_URL = '/media/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 SECRET_KEY = 'AKJSKJKGAKGJAKSGJKAGJAKSGJKAJGKLDJI&@@U#IO@#*'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
