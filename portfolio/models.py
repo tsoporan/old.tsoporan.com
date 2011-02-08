@@ -26,7 +26,7 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('portfolio.views.project_detail', (), {'slug': self.slug),})
+        return ('portfolio.views.project_detail', (), {'slug': self.slug,})
 
     def save(self):
         if not self.slug:
@@ -38,7 +38,7 @@ class Project(models.Model):
 
 
 class ProjectResource(models.Model):
-    resource = models.FileField(upload_to = "")
+    resource = models.FileField(upload_to = "uploads/%Y/%m%/d")
     description = models.TextField()    
     project = models.ForeignKey(Project)
 
