@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'portfolio', 
     'south', 
 )
 #Load sensitive settings.
