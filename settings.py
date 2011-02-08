@@ -13,7 +13,7 @@ DATABASES = {
         'NAME': os.path.join(HERE, 'tsoporan.db'),                      
         'USER': '',                      
         'PASSWORD': '',                  
-        'HOST': '',                      .
+        'HOST': '',                      
         'PORT': '',                      
     }
 }
@@ -60,4 +60,4 @@ INSTALLED_APPS = (
     'south', 
 )
 #Load sensitive settings.
-execfile(os.path.join(HERE), '.private-settings'))
+execfile(os.path.join(HERE, '.private-settings'))
