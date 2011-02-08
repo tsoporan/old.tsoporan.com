@@ -6,3 +6,4 @@
 *.swp
 *.db
 *.wsgi
+.private-settings
