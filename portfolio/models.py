@@ -20,9 +20,11 @@ class Skill(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(blank=True)
+    url = models.URLField(verify_exists=False) #don't error if website doesn't exist anymore
     created = models.DateTimeField(auto_now_add=True)
     client = models.ForeignKey(Client)
     skills = models.ManyToManyField(Skill)
+    description = models.TextField()
 
     @models.permalink
     def get_absolute_url(self):
@@ -31,14 +33,14 @@ class Project(models.Model):
     def save(self):
         if not self.slug:
             self.slug = slugify(self.name)
-        super(Project, self).save(*args, **kwargs)
+        super(Project, self).save()
     
     def __unicode__(self):
         return self.name
 
 
 class ProjectResource(models.Model):
-    resource = models.FileField(upload_to = "uploads/%Y/%m%/d")
+    resource = models.FileField(upload_to = "uploads/%Y/%m/%d")
     description = models.TextField()    
     project = models.ForeignKey(Project)
 
