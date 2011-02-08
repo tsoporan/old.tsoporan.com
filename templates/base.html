@@ -1,0 +1,93 @@
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{% block title%}Page Name{% endblock %}</title>
+  {% block metadata %}
+  <meta name="description" content="">
+  <meta name="author" content="Titus Soporan">
+  {% endblock metadata %}  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% block styles %}
+  <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css?v=2">
+  {% endblock styles %}  
+  <link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.ico">
+  <link rel="apple-touch-icon" href="{{ MEDIA_URL }}apple-touch-icon.png">
+
+  <script src="{{ MEDIA_URL }}js/libs/modernizr-1.6.min.js"></script>
+</head>
+{% endblock head %}
+
+{% block body %}
+<body class="{% block body_class %}index{% endblock %}">
+
+  <div id="container">
+    {% block header %}
+    <header>
+
+    </header>
+    {% endblock header %}
+    
+
+    {% block main %}
+    <div id="main">
+
+    </div>
+    {% endblock main %}
+    
+    {% block footer %}
+    <footer>
+
+    </footer>
+    {% endblock footer %}
+  </div> <!-- end of #container -->
+
+
+  {% block js %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ MEDIA_URL }}js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+  {% endblock js %}
+  
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="{{ MEDIA_URL }}js/plugins.js"></script>
+  <script src="{{ MEDIA_URL }}js/script.js"></script>
+  <!-- end concatenated and minified scripts-->
+  
+  
+  <!--[if lt IE 7 ]>
+    <script src="{{ MEDIA_URL }}js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+
+  <!-- yui profiler and profileviewer - remove for production -->
+  <script src="{{ MEDIA_URL }}js/profiling/yahoo-profiling.min.js"></script>
+  <script src="{{ MEDIA_URL }}js/profiling/config.js"></script>
+  <!-- end profiling code -->
+
+
+  <!-- change the UA-XXXXX-X to be your site's ID -->
+  <script>
+   var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
+  
+</body>
+{% endblock body %}
+
+</html>
