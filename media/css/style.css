@@ -91,61 +91,62 @@ body {
     background: #000;
     height: 100%;
     width: 100%;
-    margin-top: 20px;
 }
 #container {
-    margin: 20px auto;
-    padding: 20px;
     height: 100%;
-    width: 80%;
-    background: #fff;
+    background: #000;
     overflow: hidden;
 }
-
 header {
-    position: relative;
+    background: #111;
+    height: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid #000;
 }
 header h1 {
     font-family: "Droid Sans", sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     float: left;
-    position: absolute;
-    top: 0;
-    left: -20px;
+    margin: 5px 10px;
 }
-h1 a { 
+header h1 a { 
     text-decoration: none;
+    color: #d92727 !important;
 }
-header nav ul {
+header h1 a:hover {
+    color: #fff !important;
+}
+header h1 span {
+    background: #000;
+    padding: 7px 0;
+    color: #fff;
+}
+nav {
     float: right;
-    margin: 25px 0;
+    height: 100%;
 }
-header nav ul li{
+nav ul li {
     display: inline;
-    text-align: center;
 }
-header nav ul li a {
-    background: #000;
-    padding: 5px;
-    text-decoration: none;
+nav ul li a {
+    display: block;
+    float: left;
+    padding: 17px;
 }
-header nav ul li a:hover {
-    background: #ffa459;
-}
-header span {
-    background: #000;
-    padding: 3px;
-    color: #D92727;
+nav ul li a:hover {
+    background: #d92727;
+    color: #fff;
 }
 #main {
-    background: #000;
-    height: 100px;
     clear: both;
+    width: 80%;
+    margin: 20px auto;
 }
 footer {
-    margin-top: 20px;
-    background: #000;
+    width: 80%;
+    margin: 20px auto;
     height: 50px;
+    border-top: 1px solid #555;
 }
 @media all and (orientation:portrait) { 
   

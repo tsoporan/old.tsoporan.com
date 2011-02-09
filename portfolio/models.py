@@ -1,8 +1,13 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+class Category(models.Model):
+    name = models.CharField(max_length=250, unique=True)
+    
+    def __unicode__(self):
+        return self.name
+
 class Client(models.Model):
-    """Represents a client."""
     name = models.CharField(max_length=250, unique=True)
     
     class Meta:
@@ -12,7 +17,6 @@ class Client(models.Model):
         return self.name
 
 class Skill(models.Model):
-    """Represents a skill."""
     name = models.CharField(max_length=255)
     description = models.TextField()
     
@@ -20,13 +24,13 @@ class Skill(models.Model):
         return self.name
 
 class Project(models.Model):
-    """Represents a project."""
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(blank=True)
     url = models.URLField(verify_exists=False) #don't error if website doesn't exist anymore
     created = models.DateTimeField(auto_now_add=True)
     client = models.ForeignKey(Client)
     skills = models.ManyToManyField(Skill)
+    category = models.ForeignKey(Category)
     description = models.TextField()
 
     @models.permalink
@@ -41,9 +45,7 @@ class Project(models.Model):
     def __unicode__(self):
         return self.name
 
-
 class ProjectResource(models.Model):
-    """Represents a resource tied to a project."""
     resource = models.FileField(upload_to = "uploads/%Y/%m/%d")
     description = models.TextField()    
     project = models.ForeignKey(Project)

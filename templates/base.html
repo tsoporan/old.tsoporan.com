@@ -36,7 +36,6 @@
   <div id="container">
     {% block header %}
     <header>
-        <h1><a href="{% url index %}" title="Titus Soporan"><span>ts</span>oporan</a></h1>
         <nav>
             <ul>
                 <li><a href="{% url about %}">about</a></li>
@@ -44,6 +43,7 @@
                 <li><a href="{% url contact %}">contact</a></li>
             </ul>
         </nav>
+        <h1><a href="{% url index %}" title="Titus Soporan"><span>ts</span>oporan</a></h1>
     </header>
     {% endblock header %}
     

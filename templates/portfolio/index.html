@@ -9,6 +9,12 @@
     <h2> Heading/Intro </h2>
 
     <p> Showcase projects </p>
+
+    <ul id="projects">
+    {% for p in projects %}
+        <li>{{ p }}</li>
+    {% endfor %}
+    </ul>
 </div>
 {% endblock main %}
 
