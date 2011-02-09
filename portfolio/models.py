@@ -3,7 +3,10 @@ from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
-    
+   
+    class Meta:
+        verbose_name_plural = "Categories"
+ 
     def __unicode__(self):
         return self.name
 
@@ -18,7 +21,7 @@ class Client(models.Model):
 
 class Skill(models.Model):
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     
     def __unicode__(self):
         return self.name
@@ -47,7 +50,7 @@ class Project(models.Model):
 
 class ProjectResource(models.Model):
     resource = models.FileField(upload_to = "uploads/%Y/%m/%d")
-    description = models.TextField()    
+    description = models.TextField(blank=True)    
     project = models.ForeignKey(Project)
 
     def __unicode__(self):

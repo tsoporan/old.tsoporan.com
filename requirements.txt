@@ -1,2 +1,5 @@
 django
 south
+sorl-thumbnail
+PIL
+akismet

@@ -8,3 +8,4 @@
 *.wsgi
 .private-settings
 logs
+media/uploads

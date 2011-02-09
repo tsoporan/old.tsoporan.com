@@ -1,6 +1,9 @@
 #tsoporan.com settings.
 
 import os
+from django.contrib.sites.models import Site
+
+DOMAIN = Site.objects.get_current().domain
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 DEBUG = False 
@@ -60,6 +63,13 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'portfolio', 
     'south', 
+    'sorl.thumbnail',
 )
+
+EMAIL_SUBJECT_PREFIX = "[{} ] ".format(domain)
+DEFAULT_FROM_EMAIL = "contact@{}".format(domain) 
+
+AKISMET_API_KEY = "your akismet api key for contact form spam prevention"
+
 #Load sensitive settings.
 execfile(os.path.join(HERE, '.private-settings'))

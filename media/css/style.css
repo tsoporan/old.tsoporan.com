@@ -88,20 +88,22 @@ button {  width: auto; overflow: visible; }
 a {}
 a:hover {}
 body {
-    background: #000;
+    background: #ddd;
     height: 100%;
     width: 100%;
 }
 #container {
     height: 100%;
-    background: #000;
+    background: #ddd;
     overflow: hidden;
 }
 header {
-    background: #111;
+    background: #555;
     height: 100%;
     overflow: hidden;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #222;
+    border-top: 2px solid #888;
+    z-index: 9999;
 }
 header h1 {
     font-family: "Droid Sans", sans-serif;
@@ -111,15 +113,9 @@ header h1 {
 }
 header h1 a { 
     text-decoration: none;
-    color: #d92727 !important;
+    color: #111 !important;
 }
 header h1 a:hover {
-    color: #fff !important;
-}
-header h1 span {
-    background: #000;
-    padding: 7px 0;
-    color: #fff;
 }
 nav {
     float: right;
@@ -132,6 +128,7 @@ nav ul li a {
     display: block;
     float: left;
     padding: 17px;
+    color: #111 !important;
 }
 nav ul li a:hover {
     background: #d92727;
@@ -142,11 +139,35 @@ nav ul li a:hover {
     width: 80%;
     margin: 20px auto;
 }
+
+section h2 {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 22px;
+    border-bottom: 2px solid #333;
+}
+
+section#projects {
+    overflow: hidden;
+}
+
+#projects li {
+    width: 50%;
+    background: #111;
+    float: left;
+    display: block;
+    height: 100px;
+    
+}
+
+section#contact {
+    clear: both;
+}
+
 footer {
     width: 80%;
     margin: 20px auto;
     height: 50px;
-    border-top: 1px solid #555;
+    background: #111;
 }
 @media all and (orientation:portrait) { 
   
