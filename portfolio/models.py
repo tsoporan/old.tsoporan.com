@@ -27,6 +27,8 @@ class Skill(models.Model):
         return self.name
 
 class Project(models.Model):
+    WEIGHT = tuple(enumerate(range(10)))
+
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(blank=True)
     url = models.URLField(verify_exists=False) #don't error if website doesn't exist anymore
@@ -35,6 +37,10 @@ class Project(models.Model):
     skills = models.ManyToManyField(Skill)
     category = models.ForeignKey(Category)
     description = models.TextField()
+    ordering = models.IntegerField(default=1, choices=WEIGHT, help_text="Ordering by least to greatest, i.e 1 is lighter than 5.")
+
+    class Meta:
+        ordering = ['ordering']
 
     @models.permalink
     def get_absolute_url(self):

@@ -10,7 +10,7 @@ class ResourceInline(admin.StackedInline):
 
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ResourceInline]
-    list_display = ('name', 'slug', 'url', 'created', 'description')
+    list_display = ('name', 'ordering', 'url', 'created', 'description')
 
 admin.site.register(Category)
 admin.site.register(Client)
