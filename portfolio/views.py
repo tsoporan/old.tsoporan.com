@@ -6,7 +6,7 @@ from django.views.generic.simple import direct_to_template
 from django.views.generic.list_detail import object_list, object_detail
 from django.core.mail import send_mail
 from django.conf import settings
-from django.contrib.site.models import Site
+from django.contrib.sites.models import Site
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 
