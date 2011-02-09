@@ -55,9 +55,18 @@ class Project(models.Model):
         return self.name
 
 class ProjectResource(models.Model):
+    TYPES = (
+        ("img", "img"),
+        ("vid", "vid"),
+        ("doc", "doc"),
+        ("xls", "xls"), 
+        ("pdf", "pdf"),
+    )
+
     resource = models.FileField(upload_to = "uploads/%Y/%m/%d")
     description = models.TextField(blank=True)    
-    project = models.ForeignKey(Project)
+    project = models.ForeignKey(Project, related_name="resources")
+    type = models.CharField(max_length=200, choices=TYPES, default="img")
 
     def __unicode__(self):
         return self.resource.name

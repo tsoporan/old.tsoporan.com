@@ -4,6 +4,8 @@
 
 {% block body_class %}home{% endblock %}
 
+{% load thumbnail %}
+
 {% block main %}
 <div id="main">
     <section id="intro">
@@ -19,7 +21,38 @@
 
         <ul id="projects">
         {% for p in projects %}
-        <li>{{ p }}</li>
+            <li class="project">
+                
+                <div class="slideshow">
+                {% if p.resources.all %}
+                    {% for r in p.resources.all %}
+                        {% if r.resource and r.type == 'img' %}
+                            {% thumbnail r.resource "250x250" crop="center" as im %}
+                            <img src="{{ im.url }}" height="{{ im.height }}" width="{{ im.width }}">
+                            {% endthumbnail %}
+                        
+                        {% else %}
+                            <img class="noimg" src="" height="250" width="250">
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                </div>
+    
+
+                <div class="info">
+                <h3>{{ p.name }}</h3>
+                <p class="client">{{ p.client }} </p>
+                
+                <p class="view"><span>View</span>: <a href="{{ p.url }}" title="{{ p.name }}">{{ p.url }}</a> </p>
+                <p class="desc">{{ p.description }}</p>
+                {% for r in p.resource.sall %} {% if r.type != "img" %} {{ r }} {% endif %} {% endfor %}</p>
+                <ul class="skills">
+                    {% for s in p.skills.all %}
+                        <li class="skill"> {{ s }} </li>
+                    {% endfor %}
+                </ul>
+                </div>
+            </li>
         {% endfor %}
         </ul>
     </section>

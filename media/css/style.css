@@ -88,32 +88,30 @@ button {  width: auto; overflow: visible; }
 a {}
 a:hover {}
 body {
-    background: #ddd;
+    background: #e8e8f0;
     height: 100%;
     width: 100%;
 }
 #container {
     height: 100%;
-    background: #ddd;
     overflow: hidden;
 }
 header {
-    background: #555;
+    background: #182945;
     height: 100%;
     overflow: hidden;
-    border-bottom: 2px solid #222;
-    border-top: 2px solid #888;
     z-index: 9999;
 }
 header h1 {
     font-family: "Droid Sans", sans-serif;
-    font-size: 32px;
+    font-size: 48px;
     float: left;
     margin: 5px 10px;
+    font-weight: bold;
 }
 header h1 a { 
     text-decoration: none;
-    color: #111 !important;
+    color: #fff !important;
 }
 header h1 a:hover {
 }
@@ -136,8 +134,13 @@ nav ul li a:hover {
 }
 #main {
     clear: both;
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
+    background: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px;
 }
 
 section h2 {
@@ -150,21 +153,89 @@ section#projects {
     overflow: hidden;
 }
 
-#projects li {
-    width: 50%;
-    background: #111;
+#projects {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#projects li.project {
+    width: 46%;
+    background: #222;
     float: left;
     display: block;
-    height: 100px;
-    
+    padding: 0;
+    list-style: none;
+    margin-left: 2%;
+    color: #e8e8f0;
+    overflow: hidden;
+}
+
+img.noimg {
+    background: #000;
+    height: 200px;
+    width: 100px;
+}
+
+.skills {
+    margin: 0;
+    padding: 0;
+}
+li.skill {
+    background: #A1C436;
+    color: #d0e799;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 2px 3px;
+    padding: 3px;
+    list-style: none;
+    display: block;
+    float: left;
+}
+
+div.slideshow {
+    float: left;
+    width: 71%;
+}
+
+div.info {
+    float: left;
+    width: 29%;
+        
+}
+
+div.info h3 {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 18px;
 }
 
 section#contact {
     clear: both;
 }
 
+section#contact form label {
+    display: block;
+}
+
+section#contact form input, textarea {
+    border: 1px solid #333;
+    padding: 3px;
+}
+
+.errorlist {
+    margin: 0;
+    padding: 0;
+}
+.errorlist li {
+    background: #d92727;
+    color: #fff;
+    list-style: none;
+    padding: 5px;
+    margin: 2px 0;
+}
+
 footer {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     background: #111;
 }
