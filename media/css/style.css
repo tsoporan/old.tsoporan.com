@@ -166,7 +166,6 @@ section#contact {
 footer {
     width: 80%;
     margin: 20px auto;
-    height: 50px;
     background: #111;
 }
 @media all and (orientation:portrait) { 

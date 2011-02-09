@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from portfolio.models import Project
@@ -12,7 +13,7 @@ from django.core.urlresolvers import reverse
 
 def index(request, template="portfolio/index.html"):
     if request.method == 'POST' and request.POST:
-        form = AkismetContactForm(request.POST)
+        form = AkismetContactForm(meta=request.META, data=request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             from_email = settings.DEFAULT_FROM_EMAIL
