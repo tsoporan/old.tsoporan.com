@@ -196,7 +196,7 @@ nav ul li a:hover {
     font-size: 72px;
     color: #222;
     padding-top: 50px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-shadow: 0 1px 0 #fff;
 }
@@ -278,7 +278,6 @@ div.info p.view {
     font-size: 16px;
     text-shadow: 0 1px 0 #3b7fac;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
 }
 div.info p.view a {

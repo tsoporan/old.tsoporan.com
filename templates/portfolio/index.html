@@ -40,8 +40,8 @@
                 <h3>{{ p.name }}</h3>
                 <p class="client">{{ p.client }} </p>
                 
-                <p class="view"><span>View</span>: <a href="{{ p.url }}" title="{{ p.name }}">{{ p.url }}</a> </p>
-                <p class="desc">{{ p.description }}</p>
+                <p class="view"><span>View</span>: {{ p.url|urlizetrunc:15 }} </p>
+                <p class="desc">{{ p.description|truncatewords:25 }}</p>
                 {% for r in p.resource.sall %} {% if r.type != "img" %} {{ r }} {% endif %} {% endfor %}</p>
                 <ul class="skills">
                     {% for s in p.skills.all %}
