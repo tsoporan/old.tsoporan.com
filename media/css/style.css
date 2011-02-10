@@ -167,6 +167,13 @@ nav ul li a:hover {
     -webkit-border-bottom-right-radius: 10px;
     border-radius: 10px 0 10px 0;
 }
+#intro {
+    -moz-border-radius: none; 
+    -webkit-border-top-left-radius: none;
+    -webkit-border-bottom-right-radius: none;
+    border-radius: none;
+}
+
 #intro, #about, #work, #contact {
     background: #fff;
     margin-top: 100px;
@@ -217,7 +224,7 @@ ul.skills {
 }
 li.skill {
     background: #A1C436;
-    color: #d0e799;
+    color: #fff;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -226,6 +233,7 @@ li.skill {
     list-style: none;
     display: block;
     float: left;
+    text-shadow: 0 1px 0 #7d9a2f;
 }
 div.slideshow {
     float: left;
@@ -234,15 +242,21 @@ div.slideshow {
     height: auto;
     background: #111;
     min-height: 350px;
+    overflow: hidden;
 }
+div.slideshow:hover {
+    opacity: 0.9;
+}
+
 div.slideshow img {
-    border: 5px solid #46a5e5;
+    width: 100%;
 }
 div.info {
     float: left;
     width: 35%;
     background: #222;
     min-height: 350px;
+    text-shadow: 0 1px 0 #000;
 }
 div.info h3 {
     font-family: "Droid Sans", sans-serif;
@@ -252,6 +266,17 @@ div.info h3 {
 div.info p {
     padding: 10px;
 }
+div.info p.view {
+    display: block;
+    background: #46a5e5;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #3b7fac;
+}
+/*meep ?*/
+div.info p.view a {
+    color: #fff;
+}
+
 #contact {
     clear: both;
 }

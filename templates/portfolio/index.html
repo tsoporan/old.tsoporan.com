@@ -31,9 +31,7 @@
                 <div class="slideshow">
                 {% if p.resources.all %}
                     {% for r in p.resources.all %}
-                        {% thumbnail r.resource "250x250" crop="center" as im %}
-                        <img src="{{ im.url }}">
-                        {% endthumbnail %}
+                        <a href="" title=""><img src="{{ r.resource.url }}"></a>
                     {% endfor %}
                 {% endif %}
                 </div>
