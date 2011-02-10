@@ -85,22 +85,32 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Titus Soporan 
  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
 a {}
 a:hover {}
+
+html {
+    height: 100%;
+    width: 100%;
+}
 body {
     background: #e8e8f0;
     height: 100%;
     width: 100%;
 }
-#container {
-    height: 100%;
-    overflow: hidden;
-}
 header {
     background: #182945;
-    height: 100%;
     overflow: hidden;
     z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
 }
 header h1 {
     font-family: "Droid Sans", sans-serif;
@@ -125,8 +135,11 @@ nav ul li {
 nav ul li a {
     display: block;
     float: left;
-    padding: 17px;
-    color: #111 !important;
+    padding: 26px;
+    color: #fff !important;
+    font-family: "Droid Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 }
 nav ul li a:hover {
     background: #d92727;
@@ -135,12 +148,25 @@ nav ul li a:hover {
 #main {
     clear: both;
     width: 90%;
-    margin: 20px auto;
-    background: #fff;
+    margin: 0px auto 0;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    padding: 20px;
+    min-height: 100%;
+    height: 100%;
+}
+#about, #work, #contact {
+    display: none;
+}
+#intro {
+    overflow: auto;
+    height: 100%;
+}
+#intro h2 {
+    padding-top: 100px;
+}
+
+#intro, #about, #work, #contact {
 }
 
 section h2 {
@@ -149,10 +175,9 @@ section h2 {
     border-bottom: 2px solid #333;
 }
 
-section#projects {
+#projects, #work {
     overflow: hidden;
 }
-
 #projects {
     margin: 0;
     padding: 0;
@@ -160,13 +185,13 @@ section#projects {
 }
 
 #projects li.project {
-    width: 46%;
+    width: 50%;
     background: #222;
     float: left;
     display: block;
     padding: 0;
     list-style: none;
-    margin-left: 2%;
+    margin-bottom: 10px;
     color: #e8e8f0;
     overflow: hidden;
 }
@@ -195,13 +220,17 @@ li.skill {
 
 div.slideshow {
     float: left;
-    width: 71%;
+    width: 65%;
+}
+
+div.slideshow img {
+    width: 80%;
+    margin: 0 auto;
 }
 
 div.info {
     float: left;
-    width: 29%;
-        
+    width: 35%;
 }
 
 div.info h3 {
@@ -235,9 +264,16 @@ section#contact form input, textarea {
 }
 
 footer {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
     background: #111;
+    text-align: center;
+    position: fixed; 
+    margin-top: -150px;
+    clear: both;
+    z-index: 9999;
+    bottom: 0;
+    height: 50px;
+    opacity: 0.9;
 }
 @media all and (orientation:portrait) { 
   
