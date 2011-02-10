@@ -110,20 +110,22 @@ header {
     left: 0;
     width: 100%;
     opacity: 0.9;
+    text-shadow: 0px 1px 0px #081120;
 }
-header h1 {
+header #logo {
     font-family: "Droid Sans", sans-serif;
     font-size: 48px;
     float: left;
     margin: 5px 10px;
     font-weight: bold;
 }
-header h1 a { 
+header #logo a { 
     text-decoration: none;
-    color: #fff !important;
-    text-shadow: 0px 1px 1px #000;
+    color: #fff;
+    text-shadow: 0 3px 0 #081120;
 }
-header h1 a:hover {
+header #logo a:hover {
+
 }
 nav {
     float: right;
@@ -196,9 +198,10 @@ nav ul li a:hover {
     padding-top: 50px;
     width: 80%;
     margin: 0 auto;
+    text-shadow: 0 1px 0 #fff;
 }
 #intro h3 span {
-    background: #d92727;
+    color: #d92727;
 }
 #work {
     height: auto !important;
@@ -211,7 +214,6 @@ nav ul li a:hover {
 li.project {
     width: 50%;
     float: left;
-    display: block;
     padding: 0;
     list-style: none;
     margin-bottom: 10px;
@@ -238,17 +240,21 @@ li.skill {
 div.slideshow {
     float: left;
     width: 65%;
-    position: relative;
     height: auto;
-    background: #111;
     min-height: 350px;
     overflow: hidden;
+    position: relative;
+    background: #111;
 }
 div.slideshow:hover {
     opacity: 0.9;
 }
 
 div.slideshow img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     width: 100%;
 }
 div.info {
@@ -271,10 +277,16 @@ div.info p.view {
     background: #46a5e5;
     font-size: 16px;
     text-shadow: 0 1px 0 #3b7fac;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-/*meep ?*/
 div.info p.view a {
     color: #fff;
+}
+div.info p.view a:hover {
+    color: #1174b6;
+    text-shadow: 0 1px 0 #0f5889;
 }
 
 #contact {
