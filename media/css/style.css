@@ -203,7 +203,6 @@ nav ul li a:hover {
 }
 li.project {
     width: 50%;
-    background: #222;
     float: left;
     display: block;
     padding: 0;
@@ -214,7 +213,7 @@ li.project {
 }
 ul.skills {
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
 }
 li.skill {
     background: #A1C436;
@@ -231,17 +230,27 @@ li.skill {
 div.slideshow {
     float: left;
     width: 65%;
+    position: relative;
+    height: auto;
+    background: #111;
+    min-height: 350px;
 }
 div.slideshow img {
-    width: 100%;
+    border: 5px solid #46a5e5;
 }
 div.info {
     float: left;
     width: 35%;
+    background: #222;
+    min-height: 350px;
 }
 div.info h3 {
     font-family: "Droid Sans", sans-serif;
     font-size: 18px;
+    padding: 10px;
+}
+div.info p {
+    padding: 10px;
 }
 #contact {
     clear: both;
@@ -269,7 +278,14 @@ div.info h3 {
     color: #ccc;
     text-align: center;
     padding: 10px 15px;
+    border: none;
+    font-weight: bold;
 }
+#contact form input[type=submit]:hover {
+    background: #A1C436;
+    color: #fff;
+}
+
 #contact div {
     width: 50%;
     float: left;
