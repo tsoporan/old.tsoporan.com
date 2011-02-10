@@ -68,7 +68,7 @@ input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 
 
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+/*a:link { -webkit-tap-highlight-color: #FF5E99; }*/ 
 
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
@@ -92,7 +92,6 @@ button {  width: auto; overflow: visible; }
 }
 a {}
 a:hover {}
-
 html {
     height: 100%;
     width: 100%;
@@ -122,6 +121,7 @@ header h1 {
 header h1 a { 
     text-decoration: none;
     color: #fff !important;
+    text-shadow: 0px 1px 1px #000;
 }
 header h1 a:hover {
 }
@@ -136,7 +136,7 @@ nav ul li a {
     display: block;
     float: left;
     padding: 26px;
-    color: #fff !important;
+    color: #fff;
     font-family: "Droid Sans", sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -149,32 +149,38 @@ nav ul li a:hover {
     clear: both;
     width: 90%;
     margin: 0px auto 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
     min-height: 100%;
     height: 100%;
 }
-#about, #work, #contact {
-    display: none;
-}
+#about, #work, #contact {}
 #intro {
     overflow: auto;
-    height: 100%;
 }
-#intro h2 {
-    padding-top: 100px;
+#intro h2,#about h2, #work h2, #contact h2 {
+    display: inline;
+    background: #222;
+    color: #A1C436;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Droid Sans", sans-serif;
+    font-size: 22px;
 }
 
 #intro, #about, #work, #contact {
+    background: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin-top: 100px;
+    height: 100%;
+    position: relative;
 }
-
-section h2 {
-    font-family: "Droid Sans", sans-serif;
-    font-size: 22px;
-    border-bottom: 2px solid #333;
+#work {
+    height: auto !important;
 }
-
 #projects, #work {
     overflow: hidden;
 }
@@ -183,8 +189,7 @@ section h2 {
     padding: 0;
     width: 100%;
 }
-
-#projects li.project {
+li.project {
     width: 50%;
     background: #222;
     float: left;
@@ -195,14 +200,12 @@ section h2 {
     color: #e8e8f0;
     overflow: hidden;
 }
-
-img.noimg {
+.noimg {
     background: #000;
     height: 200px;
     width: 100px;
 }
-
-.skills {
+ul.skills {
     margin: 0;
     padding: 0;
 }
@@ -217,7 +220,6 @@ li.skill {
     display: block;
     float: left;
 }
-
 div.slideshow {
     float: left;
     width: 65%;
@@ -227,30 +229,24 @@ div.slideshow img {
     width: 80%;
     margin: 0 auto;
 }
-
 div.info {
     float: left;
     width: 35%;
 }
-
 div.info h3 {
     font-family: "Droid Sans", sans-serif;
     font-size: 18px;
 }
-
 section#contact {
     clear: both;
 }
-
 section#contact form label {
     display: block;
 }
-
 section#contact form input, textarea {
     border: 1px solid #333;
     padding: 3px;
 }
-
 .errorlist {
     margin: 0;
     padding: 0;
@@ -262,7 +258,6 @@ section#contact form input, textarea {
     padding: 5px;
     margin: 2px 0;
 }
-
 footer {
     width: 100%;
     background: #111;

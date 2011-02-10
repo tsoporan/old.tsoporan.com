@@ -65,6 +65,27 @@
         </form>
     </section>
 </div>
+
+
+{% block js %}
+    {{ block.super }}
+    <script src="{{ MEDIA_URL }}js/libs/easing.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('nav li a').click(function () { 
+            
+                var url = this.href;           
+                var pageid = url.split('#')[1];
+                
+                var offset = $('#'+pageid).offset();
+
+                $('body, html').animate({scrollTop: offset.top - 100}, 1000, 'easeOutBack');
+                return false;
+            });
+        });
+    </script>
+{% endblock js %}
+
 {% endblock main %}
 
 {% block footer %}
