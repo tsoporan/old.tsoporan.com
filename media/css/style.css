@@ -152,42 +152,54 @@ nav ul li a:hover {
     min-height: 100%;
     height: 100%;
 }
-#about, #work, #contact {}
-#intro {
-    overflow: auto;
-}
 #intro h2,#about h2, #work h2, #contact h2 {
     display: inline;
     background: #222;
     color: #A1C436;
     padding: 20px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20px; 
+    left: -20px;
     font-family: "Droid Sans", sans-serif;
     font-size: 22px;
+    -moz-border-radius: 10px 0 10px 0;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-radius: 10px 0 10px 0;
 }
-
 #intro, #about, #work, #contact {
     background: #fff;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 0 20px;
     margin-top: 100px;
     height: 100%;
     position: relative;
+    -moz-box-shadow: 10px 10px 50px 0px #888;
+    -webkit-box-shadow: 10px 10px 50px 0px #888;
+    box-shadow: 10px 10px 50px 0px #888;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radisu: 3px;
+}
+#intro {
+    background: transparent;
+    text-align: center;
+}
+#intro h3 {
+    font-size: 72px;
+    color: #222;
+    padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+#intro h3 span {
+    background: #d92727;
 }
 #work {
     height: auto !important;
 }
-#projects, #work {
-    overflow: hidden;
-}
 #projects {
     margin: 0;
-    padding: 0;
-    width: 100%;
+    padding: 50px 20px 0;
+    overflow: hidden;
 }
 li.project {
     width: 50%;
@@ -200,11 +212,6 @@ li.project {
     color: #e8e8f0;
     overflow: hidden;
 }
-.noimg {
-    background: #000;
-    height: 200px;
-    width: 100px;
-}
 ul.skills {
     margin: 0;
     padding: 0;
@@ -213,6 +220,7 @@ li.skill {
     background: #A1C436;
     color: #d0e799;
     -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0 2px 3px;
     padding: 3px;
@@ -224,10 +232,8 @@ div.slideshow {
     float: left;
     width: 65%;
 }
-
 div.slideshow img {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
 }
 div.info {
     float: left;
@@ -237,18 +243,47 @@ div.info h3 {
     font-family: "Droid Sans", sans-serif;
     font-size: 18px;
 }
-section#contact {
+#contact {
     clear: both;
 }
-section#contact form label {
+#contact form label {
     display: block;
+    font-size: 20px;
+    padding: 5px 0;
 }
-section#contact form input, textarea {
+#contact form input, textarea {
     border: 1px solid #333;
-    padding: 3px;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#contact form {
+    margin-top: 50px;
+    padding: 0 20px 0;
+    border-left: 1px solid #eee;
+}
+#contact form input[type=submit] {
+    background: #222;
+    margin: 10px 0;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 15px;
+}
+#contact div {
+    width: 50%;
+    float: left;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+#contact div h3 {
+    margin-top: 50px;
+    padding: 0 20px 0;
+    font-size: 38px;
 }
 .errorlist {
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
 }
 .errorlist li {
@@ -256,7 +291,6 @@ section#contact form input, textarea {
     color: #fff;
     list-style: none;
     padding: 5px;
-    margin: 2px 0;
 }
 footer {
     width: 100%;

@@ -9,15 +9,15 @@
 {% block main %}
 <div id="main">
     <section id="intro">
-        <h2> Intro. </h2>
+        <h3> I am a <span>web developer</span>, zombie wrangler, and general software mercernary with the power of both Superman and Captain Planet embedded in my fingertips.</h3>
     </section>
 
     <section id="about">
-        <h2> About. </h2>
+        <h2> About </h2>
     </section>
 
     <section id="work">
-        <h2> Work. </h2>
+        <h2> Work </h2>
 
         <ul id="projects">
         {% for p in projects %}
@@ -58,11 +58,22 @@
     </section>
 
     <section id="contact">
-        <h2> Contact. </h2>
-        <form action="" method="POST">{% csrf_token %}
+        <h2> Contact </h2>
+        <div class="contact-info">
+            <h3>Let's get in touch.</h3>
+            <p>
+                If you'd like to chat about a project or just say hi, please use the contact form .
+
+                You can also contact me via these methods:
+             </p>
+        </div>
+        
+        <div class="contact-form">
+            <form action="" method="POST">{% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Send">
-        </form>
+            <input type="submit" value="Send" next="#contact">
+            </form>
+        </div>
     </section>
 </div>
 
@@ -72,6 +83,10 @@
     <script src="{{ MEDIA_URL }}js/libs/easing.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            if ($('.errorlist').length) {
+                $('body, html').animate({scrollTop: $('#contact').offset().top - 100}, 1000, 'easeOutBack');
+            }
+
             $('nav li a').click(function () { 
             
                 var url = this.href;           
