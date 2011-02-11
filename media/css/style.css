@@ -197,10 +197,40 @@ nav ul li a:hover {
     margin: 0 auto;
     text-shadow: 0 1px 0 #fff;
 }
-#intro h3 span {
+#intro h3 a {
     color: #d92727;
+    text-decoration: none;
+}
+#intro h3 a:hover {
+    color: #b40e0e;
+}
+#about div {
+    float: left;
+    width: 50%;
+}
+#about div h3 {
+    padding: 75px 20px 0;
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    margin: 0 20px;
+}
+
+#aboutme {
+    width: 50%;
+    float: left;
+}
+#services {
+    display: block;
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+#services li {
+    list-style: none;
 }
 #work {
+    clear: both;
     height: auto !important;
 }
 #projects {
@@ -327,8 +357,7 @@ div.info p.view a:hover {
     padding: 0;
 }
 #contact div h3 {
-    margin-top: 50px;
-    padding: 0 20px 0;
+    padding: 75px 20px 0;
     font-size: 38px;
 }
 .errorlist {
@@ -353,6 +382,18 @@ footer {
     height: 100px;
     opacity: 0.9;
 }
+footer img {
+    float: right;
+    margin: 20px;
+}
+footer p {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
 @media all and (orientation:portrait) { 
   
 }

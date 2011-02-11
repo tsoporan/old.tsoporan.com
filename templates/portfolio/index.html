@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Web Developer from Ontario Canada{% endblock %}
 
 {% block styles %}
   {{ block.super }}
@@ -16,11 +16,19 @@
 {% block main %}
 <div id="main">
     <section id="intro">
-        <h3> I am a <span>web developer</span>, zombie wrangler, and general software mercernary. And, I like <span>ponies</span>.</h3>
+        <h3> I am a <a href="#about">web developer</a>, zombie wrangler, and general software mercernary. Oh, and I like <a href="http://djangoproject.com">ponies</a>.</h3>
     </section>
 
     <section id="about">
         <h2> About </h2>
+
+        <div id="aboutme">
+            <h3> Hey there! </h3>
+        </div>
+
+        <div id="services">
+            <h3> What I do </h3>
+        </div>
     </section>
 
     <section id="work">
@@ -31,10 +39,7 @@
                 
                 <div class="slideshow">
                 {% get_resource p 'logo' as logo %}
-                {% get_resource p 'screenshot' as screen %}
-                {% thumbnail screen.resource "1000" crop="center" as im %}
-                    <a class="thickbox" href="{{ im.url }}"><img src="{{ logo.resource.url }}"></a>
-                {% endthumbnail %}
+                <a href="{{ p.url }}" title="{{ p.name }}"><img src="{{ logo.resource.url }}"></a>
                 </div>
 
                 <div class="info">
@@ -78,19 +83,17 @@
 {% block js %}
     {{ block.super }}
     <script src="{{ MEDIA_URL }}js/libs/easing.js" type="text/javascript"></script>
-    <script src="{{ MEDIA_URL }}js/libs/thickbox.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             if ($('.errorlist').length) {
                 $('body, html').animate({scrollTop: $('#contact').offset().top - 100}, 1000, 'easeOutBack');
             }
 
-            $('nav li a').click(function () { 
+            $('a[href*=#]').click(function () { 
             
-                var url = this.href;           
-                var pageid = url.split('#')[1];
+                var hash = this.href.split('#')[1];
                 
-                var offset = $('#'+pageid).offset();
+                var offset = $('#'+hash).offset();
 
                 $('body, html').animate({scrollTop: offset.top - 100}, 1000, 'easeOutBack');
                 return false;
@@ -104,7 +107,8 @@
 
 {% block footer %}
     <footer>
-    Footer and other interesting stuff goes here.
+    <a href="http://djangoproject.com"><img src="http://media.djangoproject.com/img/badges/djangopowered126x54_grey.gif" border="0" alt="Powered by Django" title="Powered by Django"></a>
+   <p> {% now "Y" %} <a href="http://tsoporan.com" title="Titus Soporan - Web Develper">tsoporan.com</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. </p>
     </footer>
 {% endblock footer %}
 

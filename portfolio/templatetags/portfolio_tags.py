@@ -26,6 +26,7 @@ class GetResourceNode(template.Node):
         try:
             context[self.var_name] =  ProjectResource.objects.get(project=actual_project, name__iexact=self.name)
         except ProjectResource.DoesNotExist:
-            return ''
-        
+            pass
+        return ''       
+ 
 register.tag('get_resource', do_get_resource)
