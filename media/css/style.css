@@ -169,13 +169,6 @@ nav ul li a:hover {
     -webkit-border-bottom-right-radius: 10px;
     border-radius: 10px 0 10px 0;
 }
-#intro {
-    -moz-border-radius: none; 
-    -webkit-border-top-left-radius: none;
-    -webkit-border-bottom-right-radius: none;
-    border-radius: none;
-}
-
 #intro, #about, #work, #contact {
     background: #fff;
     margin-top: 100px;
@@ -188,7 +181,11 @@ nav ul li a:hover {
     -webkit-border-radius: 3px;
     border-radisu: 3px;
 }
+
 #intro {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     background: transparent;
     text-align: center;
 }
@@ -353,7 +350,7 @@ footer {
     clear: both;
     z-index: 9999;
     bottom: 0;
-    height: 50px;
+    height: 100px;
     opacity: 0.9;
 }
 @media all and (orientation:portrait) { 
