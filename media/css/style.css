@@ -209,7 +209,7 @@ nav ul li a:hover {
     width: 50%;
 }
 #about div h3 {
-    padding: 75px 20px 0;
+    padding: 75px 0 0;
     font-size: 38px;
     border-bottom: 1px solid #eee;
     margin: 0 20px;
@@ -222,10 +222,16 @@ nav ul li a:hover {
     display: block;
     float: left;
     width: 50%;
+}
+#aboutme p, #services p {
+    padding: 5px 20px 0;
+
+}
+#skills  {
     margin: 0;
     padding: 0;
 }
-#services li {
+#skills li {
     list-style: none;
 }
 #work {
@@ -344,7 +350,7 @@ div.info p.view a:hover {
     border: none;
     font-weight: bold;
     -moz-border-radius: 3px;
-    -webkit-border-radisu: 3px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 #contact form input[type=submit]:hover {
