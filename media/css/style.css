@@ -214,7 +214,6 @@ nav ul li a:hover {
     border-bottom: 1px solid #eee;
     margin: 0 20px;
 }
-
 #aboutme {
     width: 50%;
     float: left;
@@ -324,11 +323,12 @@ div.info p.view a:hover {
     padding: 5px 0;
 }
 #contact form input, textarea {
-    border: 1px solid #333;
+    border: 2px solid #aaa;
     padding: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    background: #ccc;
+}
+#contact form input:hover, textarea:hover {
+    background: #fff;
 }
 #contact form {
     margin-top: 50px;
@@ -337,18 +337,20 @@ div.info p.view a:hover {
 }
 #contact form input[type=submit] {
     background: #222;
-    margin: 10px 0;
+    margin: 10px 20px;
     color: #ccc;
     text-align: center;
-    padding: 10px 15px;
+    padding: 10px 25px;
     border: none;
     font-weight: bold;
+    -moz-border-radius: 3px;
+    -webkit-border-radisu: 3px;
+    border-radius: 3px;
 }
 #contact form input[type=submit]:hover {
     background: #A1C436;
     color: #fff;
 }
-
 #contact div {
     width: 50%;
     float: left;
@@ -360,9 +362,19 @@ div.info p.view a:hover {
     padding: 75px 20px 0;
     font-size: 38px;
 }
+#contact div p {
+    padding: 10px 20px 0;
+    font-size: 14px;
+}
+#contact address {
+    font-style: normal;
+    font-size: 18px;
+}
+
 .errorlist {
-    margin: 5px 0;
+    margin: 10px 20px 0;
     padding: 0;
+    border: 1px solid #af0a0a;
 }
 .errorlist li {
     background: #d92727;
