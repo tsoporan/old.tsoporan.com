@@ -227,13 +227,16 @@ nav ul li a:hover {
     padding: 5px 20px 0;
 
 }
-#skills  {
-    margin: 0;
-    padding: 0;
+#skills, #hobbies  {
+    margin: 20px 50px;
+    padding: 0;    
 }
-#skills li {
-    list-style: none;
+#hobbies li, #skills li {
+    font-size: 14px;
+    list-style: disc;
+    font-weight: bold; 
 }
+
 #work {
     clear: both;
     height: auto !important;
