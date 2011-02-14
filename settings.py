@@ -7,7 +7,7 @@ DOMAIN = "tsoporan.com"
 HERE = os.path.abspath(os.path.dirname(__file__))
 DEBUG = False 
 TEMPLATE_DEBUG = DEBUG
-ADMINS = (('Titus Soporan', 'titus@tsoporan.com'),)
+ADMINS = (('Titus Soporan', 'admin@tsoporan.com'),)
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
