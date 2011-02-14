@@ -16,7 +16,7 @@
 {% block main %}
 <div id="main">
     <section id="intro">
-        <h3> I am a <a href="#about">web developer</a>, zombie wrangler, and general software mercernary. Oh, and I like <a href="http://djangoproject.com">ponies</a>.</h3>
+        <h3> I am a <a href="#about" title="More about me">web developer</a>, zombie wrangler, and general software mercernary. <br>Oh, and I like <a href="http://stackoverflow.com/questions/2115360/what-is-the-deal-with-the-pony-in-python-community" title="Why the pony!">ponies</a>.</h3>
     </section>
 
     <section id="about">
@@ -26,7 +26,7 @@
             <h3> Hey there! </h3>
             
             <p> Hi, welcome to my little home on the web. My name is Titus Soporan and I'm a 21-year old dude from Ontario, Canada. Originally from <a href="http://en.wikipedia.org/wiki/Romania" title="Romania">Romania</a>, I immigrated to Canada at the age of six.</p>
-            <p> I was first introduced to computers around 1997 and have been hooked ever since. Whether it was playing <a href="{{ MEDIA_URL }}images/mkold.jpg" title="Old-school">Mortal Kombat</a> on DOS or fiddling with the hardware on my old 100MHz <a href="{{ MEDIA_URL }}images/dellold.jpg" title="Remember /these/ Dells?">Dell Optiplex Gl 5100</a>, I always had a computer nearby. </p>
+            <p> I was first introduced to computers around 1997 and have been hooked ever since. Whether it was playing <a href="{{ MEDIA_URL }}images/mkdos.jpg" title="Old-school">Mortal Kombat</a> on DOS or fiddling with the hardware on my old 100MHz <a href="{{ MEDIA_URL }}images/dellold.jpg" title="Remember /these/ Dells?">Dell Optiplex Gl 5100</a>, I always had a computer nearby. </p>
             <p> Over time my interests shifted to programming with a focus on the web. Originally I was doing <a href="http://en.wikipedia.org/wiki/Client-side_scripting" title="Client-side scripting">client-side</a> coding, but gradually I dived deeper into the <a href="http://en.wikipedia.org/wiki/Server-side_scripting" title="Server-side scripting">server-side</a> of things and found my pot of gold there. </p> 
 
             <p>I am a <a href="http://en.wikipedia.org/wiki/Hacker_(programmer_subculture)" title="This kind of hacker.">'hacker'</a> at heart, I love tinkering with things and seeing how they work. When I'm not working on something I'm usually thinking or reading up on: machine learning, ways of organizing and structuring the massive data on the web and providing meaningful statistics, programming language design and implementation, biology, and entrepreneurship. I believe constantly learning is a crucial part of this field of work. I am always looking for challenges and something that will push me to give my best.</p>
@@ -52,12 +52,14 @@
 
             <ul id="skills">
 
-                <li>Languages: Python, PHP, Bash, CSS, HTML, Javascript </li>
-                <li>Frameworks: Django, jQuery, Pylons </li>
-                <li>Operating Systems: Linux (Gentoo, Archlinux, Debian), Windows (XP/Vista/7)</li>
-                <li>Server Technologies: Apache, nginx, lighttpd </li>
-                <li>Databases: MySQL, PostgreSQL, SQLite</li>
-                <li>Various Software: Vim, Git, OpenSSH, Celery</li>
+                <li>Languages: <a href="http://en.wikipedia.org/wiki/Python_(programming_language)" title="Python Programming Language">Python</a>, <a href="http://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a>, <a href="http://en.wikipedia.org/wiki/Bash_(Unix_shell)" title="Bash">Bash</a>, <a href="http://en.wikipedia.org/wiki/CSS" title="CSS">CSS</a>, <a href="http://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>, <a href="http://en.wikipedia.org/wiki/Javascript" title="Javascript">Javascript</a>, <a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)" title="Ruby">Ruby</a>, <a href="http://en.wikipedia.org/wiki/C_(programming_language)" title="C">C</a> </li>
+
+                <li>Frameworks: <a href="http://en.wikipedia.org/wiki/Django_(web_framework)" title="Django Web Framework">Django</a>, <a href="http://en.wikipedia.org/wiki/Jquery" title="jQuery Javascript Framework">jQuery</a>, <a href="http://en.wikipedia.org/wiki/Pylons" title="Pylons Web Framework">Pylons</a>, <a href="http://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Rails</a> </li>
+
+                <li>Operating Systems: <a href="http://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> (Gentoo, Archlinux, Debian),<a href="http://en.wikipedia.org/wiki/Windows" title="Windows"> Windows</a> (XP/Vista/7)</li>
+                <li>Server Technologies: <a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a>, <a href="http://en.wikipedia.org/wiki/Nginx" title="nGinx Web Server">nginx</a>, <a href="http://en.wikipedia.org/wiki/Lighttpd" title="Lighttpd Web Server">lighttpd</a> </li>
+                <li>Databases: <a href="http://en.wikipedia.org/wiki/MySQL" title="MySQL Database">MySQL</a>, <a href="http://en.wikipedia.org/wiki/PostgreSQL" title="PostgreSQL Database.">PostgreSQL</a>, <a href="http://en.wikipedia.org/wiki/SQLite" title="SQLite Database">SQLite</a></li>
+                <li>Various Software/Protocols: <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" title="vIM">Vim</a>, <a href="http://en.wikipedia.org/wiki/Git_(software)" title="Git Revision Control">Git</a>, <a href="http://en.wikipedia.org/wiki/Secure_Shell" title="SSH">OpenSSH</a>, <a href="http://celeryproject.org/" title="Celery Distributed Task Queue">Celery</a></li>
 
             </ul>
         </div>
@@ -106,12 +108,22 @@
             </p>
 
             <address>     
-                <p><strong>Phone</strong>: 519-570-9888</p>
-                <p><strong>E-mail</strong>: <a href="mailto:tsoporan@gmail.com">tsoporan@gmail.com</a></p>
+                <p><strong>Phone</strong>: <a href="tel:519-570-9888">519-570-9888</a></p>
+                <p><strong>E-mail</strong>: <a href="mailto:titus@tsoporan.com">titus@tsoporan.com</a></p>
+                <p><strong>Google Talk</strong>: titus@tsoporan.com</p>
+                <p><strong>IRC</strong>: tsoporan @ irc://irc.freenode.net </p>
             </address>
         </div>
-        
+    
         <div class="contact-form">
+            {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
             <form action="" method="POST">{% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Send" next="#contact">
@@ -126,7 +138,7 @@
     <script src="{{ MEDIA_URL }}js/libs/easing.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            if ($('.errorlist').length) {
+            if ($('.errorlist').length || $('.messages').length) {
                 $('body, html').animate({scrollTop: $('#contact').offset().top - 100}, 1000, 'easeOutBack');
             }
 

@@ -7,7 +7,7 @@ DOMAIN = "tsoporan.com"
 HERE = os.path.abspath(os.path.dirname(__file__))
 DEBUG = False 
 TEMPLATE_DEBUG = DEBUG
-ADMINS = (('Your Name', 'your_email@domain.com'),)
+ADMINS = (('Titus Soporan', 'titus@tsoporan.com'),)
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
@@ -66,7 +66,7 @@ INSTALLED_APPS = (
 )
 
 EMAIL_SUBJECT_PREFIX = "[{} ] ".format(DOMAIN)
-DEFAULT_FROM_EMAIL = "contact@{}".format(DOMAIN) 
+DEFAULT_FROM_EMAIL = "contacted@{}".format(DOMAIN) 
 
 AKISMET_API_KEY = "your akismet api key for contact form spam prevention"
 

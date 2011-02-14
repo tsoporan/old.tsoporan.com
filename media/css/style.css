@@ -379,7 +379,15 @@ div.info p.view a:hover {
     font-style: normal;
     font-size: 18px;
 }
-
+.messages {
+    background: #7D9A2F;
+    color: #fff;
+    margin: 10px 20px;
+}
+.messages li {
+    list-style: none;
+    padding: 5px;
+}
 .errorlist {
     margin: 10px 20px 0;
     padding: 0;
